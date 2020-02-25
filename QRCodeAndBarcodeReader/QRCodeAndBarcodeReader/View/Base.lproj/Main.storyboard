@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="QRCodeAndBarcodeReader" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e6z-Vu-nzy">
+                                <rect key="frame" x="0.0" y="44" width="414" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QRCode And Barcode Reader" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dvh-Ai-D71">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="Dvh-Ai-D71" firstAttribute="top" secondItem="e6z-Vu-nzy" secondAttribute="top" id="7jh-1v-ARZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="Dvh-Ai-D71" secondAttribute="trailing" id="FP7-7p-kz5"/>
+                                    <constraint firstItem="Dvh-Ai-D71" firstAttribute="leading" secondItem="e6z-Vu-nzy" secondAttribute="leading" id="Otq-C6-IXb"/>
+                                    <constraint firstAttribute="height" constant="50" id="ng0-Ed-ZNl"/>
+                                    <constraint firstAttribute="bottom" secondItem="Dvh-Ai-D71" secondAttribute="bottom" id="pwF-dR-2lB"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3qh-7i-mv9" customClass="ReaderView" customModule="QRCodeAndBarcodeReader" customModuleProvider="target">
+                                <rect key="frame" x="50" y="125" width="314" height="314"/>
+                                <color key="backgroundColor" systemColor="separatorColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="3qh-7i-mv9" secondAttribute="height" multiplier="1:1" id="yvJ-MC-p5I"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lmk-Zr-T6y">
+                                <rect key="frame" x="107" y="469" width="200" height="50"/>
+                                <color key="backgroundColor" red="1" green="0.54117647059999996" blue="0.23921568630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="0E0-ur-aPs"/>
+                                    <constraint firstAttribute="height" constant="50" id="DrX-oA-6TP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <state key="selected" title="Stop"/>
+                                <connections>
+                                    <action selector="scanButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DO5-DW-Y0E"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OUq-5i-Kp2">
+                                <rect key="frame" x="0.0" y="94" width="414" height="1"/>
+                                <color key="backgroundColor" systemColor="placeholderTextColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="CfW-TZ-MEA"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OUq-5i-Kp2" secondAttribute="trailing" id="94C-0n-4Iu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="e6z-Vu-nzy" secondAttribute="trailing" id="Igd-6k-HxE"/>
+                            <constraint firstItem="e6z-Vu-nzy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="MQG-8h-6sB"/>
+                            <constraint firstItem="3qh-7i-mv9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Mj9-x9-0hc"/>
+                            <constraint firstItem="3qh-7i-mv9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="MnS-l9-CwD"/>
+                            <constraint firstItem="3qh-7i-mv9" firstAttribute="top" secondItem="OUq-5i-Kp2" secondAttribute="bottom" constant="30" id="Sdd-OO-NPF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3qh-7i-mv9" secondAttribute="trailing" constant="50" id="U7O-rM-Sr4"/>
+                            <constraint firstItem="lmk-Zr-T6y" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aaH-SG-9Ws"/>
+                            <constraint firstItem="OUq-5i-Kp2" firstAttribute="top" secondItem="e6z-Vu-nzy" secondAttribute="bottom" id="d6o-2w-RZa"/>
+                            <constraint firstItem="lmk-Zr-T6y" firstAttribute="top" secondItem="3qh-7i-mv9" secondAttribute="bottom" constant="30" id="fZW-tf-O5h"/>
+                            <constraint firstItem="e6z-Vu-nzy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="hhd-dP-fEw"/>
+                            <constraint firstItem="OUq-5i-Kp2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ygr-bU-SDE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="readButton" destination="lmk-Zr-T6y" id="cni-25-9Im"/>
+                        <outlet property="readerView" destination="3qh-7i-mv9" id="sRA-XW-gsp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="119.86607142857142"/>
+        </scene>
+    </scenes>
+</document>
