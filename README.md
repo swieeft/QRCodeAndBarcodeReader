@@ -8,4 +8,4 @@ QRCode, Barcode 리더기 예제 프로젝트입니다.
 
 **블로그 프로젝트 설명**<br>
 
-[QR, Barcode 리더기 만들기](https://swieeft.github.io/QRCodeAndBarcodeReader/)
+[QR, Barcode 리더기 만들기](https://swieeft.github.io/2020/02/25/QRCodeAndBarcodeReader.html)
